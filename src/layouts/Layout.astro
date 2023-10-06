@@ -19,7 +19,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<div id="app" class="relative h-screen p-2 gap-2">
-			<aside class="[grid-area:aside] flex-col flex overflow-y-auto bg-blue-100">
+			<aside class="[grid-area:aside] flex-col flex overflow-y-auto">
 				<AsideMenu />
 			</aside>
 			<main class="[grid-area:main] rounded-lg overflow-y-auto" ></main>
@@ -44,4 +44,43 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #000;
 	}
+	@font-face {
+        font-family: "CircularStd";
+        src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "CircularStd";
+        src: url("/fonts/CircularStd-Book.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "CircularStd";
+        src: url("/fonts/CircularStd-Light.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "CircularStd";
+        src: url("/fonts/CircularStd-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "CircularStd";
+        src: url("/fonts/CircularStd-Black.woff2") format("woff2");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
 </style>
