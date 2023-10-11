@@ -39,6 +39,7 @@ export function Player() {
     const {currentMusic, isPlaying, setIsPlaying } = usePlayerStore(state => state)
     
     const audioRef = useRef()
+    const volumeRef = useRef(1)
 
     useEffect(() => {
         isPlaying
@@ -51,6 +52,7 @@ export function Player() {
         if(song) {
             const src = `/music/${playlist?.id}/0${song.id}.mp3`
             audioRef.current.src = src
+            audioRef.current.volume = volumeRef.current
             audioRef.current.play()
         }
     } , [currentMusic])
@@ -83,7 +85,8 @@ export function Player() {
                 className="w-[95px]"
                 onValueChange={(value) => {
                     const [newVolume] = value
-                    audioRef.current.volume = newVolume / 100
+                    const volumeValue = newVolume / 100
+                    audioRef.current.volume = volumeValue
                 }}/>
             </div>
 
