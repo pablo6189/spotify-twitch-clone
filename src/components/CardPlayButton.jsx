@@ -10,7 +10,7 @@ export function CardPlayButton({ id }) {
         setCurrentMusic,
     } = usePlayerStore(state => state)
 
-    const isPlayingPlayList = isPlaying && currentMusic?.playlist.id === id
+    const isPlayingPlayList = isPlaying && currentMusic?.playlist?.id === id
 
     const handleClick = () => {
         if(isPlayingPlayList){
